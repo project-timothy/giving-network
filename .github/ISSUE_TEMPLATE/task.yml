@@ -1,0 +1,33 @@
+name: Task
+description: A unit of work someone can pick up and finish
+labels: ["task"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to happen
+      description: Describe the change, not the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: How we will know it is done
+      description: The test that passes, the behavior you can see, the file that exists.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links, prior discussion, anything that stops the next person re-deriving it.
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options:
+        - S (under a day)
+        - M (a couple of days)
+        - L (needs splitting first)
+    validations:
+      required: true

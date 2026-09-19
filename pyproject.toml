@@ -1,0 +1,15 @@
+[project]
+name = "giving-network"
+version = "0.0.0"
+description = "An open giving and support platform for missionaries and small ministries."
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
