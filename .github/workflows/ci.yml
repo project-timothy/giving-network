@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lint
+        run: uv run --with ruff ruff check .
+
+      - name: Format check
+        run: uv run --with ruff ruff format --check .
+
+      - name: Tests
+        run: |
+          status=0
+          uv run --with pytest pytest -q || status=$?
+          # pytest exits 5 when no tests exist yet. That is fine while the
+          # repo is a scaffold. A real failure still exits 1.
+          if [ "$status" -eq 5 ]; then
+            echo "No tests collected yet."
+            exit 0
+          fi
+          exit "$status"

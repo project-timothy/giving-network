@@ -35,3 +35,9 @@ AGPL-3.0.
   through a model where the receiving organization is merchant of
   record (see docs/architecture.md).
 - Open an issue before a large change so the shape can be agreed first.
+
+## How we work
+
+Branching, pull requests, review, and the weekly rhythm are written
+down in [docs/working-agreement.md](docs/working-agreement.md). Read it
+before your first pull request.
