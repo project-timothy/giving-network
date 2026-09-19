@@ -25,13 +25,12 @@ jobs:
 
       - name: Tests
         run: |
-          set -o pipefail
-          uv run --with pytest pytest -q
-          status=$?
+          status=0
+          uv run --with pytest pytest -q || status=$?
           # pytest exits 5 when no tests exist yet. That is fine while the
-          # repo is a scaffold. Any real failure still exits 1.
-          if [ $status -eq 5 ]; then
+          # repo is a scaffold. A real failure still exits 1.
+          if [ "$status" -eq 5 ]; then
             echo "No tests collected yet."
             exit 0
           fi
-          exit $status
+          exit "$status"
