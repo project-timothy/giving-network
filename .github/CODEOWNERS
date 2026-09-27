@@ -1,12 +1,3 @@
-# Every pull request automatically requests a review from the owner of
-# the files it touches. One line per directory.
-#
-# The last matching line wins, so keep the catch-all first.
-
-*                       @floridayze
-
-# As people join, give each one a directory rather than a feature.
-# Feature slices cut across every file and collide. Directories do not.
-#
-# core/agents/giving/    @someone
-# docs/                  @someone-else
+# Every change needs the owner's review before it merges (2026-09-27).
+# Maintainers with the repository's bypass (Mario) merge their own work.
+* @floridayze
