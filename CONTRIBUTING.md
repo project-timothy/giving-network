@@ -6,9 +6,8 @@ Thank you for considering a contribution.
 
 This project is licensed under the GNU Affero General Public License,
 version 3 (AGPL-3.0), with an additional permission under AGPL-3.0
-section 7 (see [LICENSE](LICENSE)). That permission follows the same
-mechanism CiviCRM has used since 2010: it lets the project accept your
-code without a separate Contributor License Agreement.
+section 7 (see [LICENSE](LICENSE)). That permission lets the project
+accept your code without a separate Contributor License Agreement.
 
 To submit a contribution, add this three-line header to the top of each
 new or substantially modified source file:

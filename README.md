@@ -31,4 +31,4 @@ and the intended module layout. Implementation follows.
 
 AGPL-3.0, with an additional permission under section 7 (see
 [LICENSE](LICENSE)) that lets contributions come in without a signed
-CLA, on the CiviCRM model. See [CONTRIBUTING.md](CONTRIBUTING.md).
+CLA. See [CONTRIBUTING.md](CONTRIBUTING.md).
